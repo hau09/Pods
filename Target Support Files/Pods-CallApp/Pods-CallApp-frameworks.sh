@@ -175,6 +175,14 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraAIDenoiseExtension.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraRtcKit.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/Agoraffmpeg.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraCore.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraSoundTouch.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/Agorafdkaac.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraDav1dExtension.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraJNDExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework"
@@ -191,8 +199,17 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtmKit/AgoraRtmKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraAIDenoiseExtension.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraRtcKit.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/Agoraffmpeg.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraCore.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraSoundTouch.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/Agorafdkaac.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraDav1dExtension.framework"
+  install_framework "${PODS_ROOT}/AgoraRtcEngine_iOS/AgoraJNDExtension.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework"
@@ -209,6 +226,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/AgoraRtmKit/AgoraRtmKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
